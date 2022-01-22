@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #nav{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #left{
+            width: 55%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 700;
+            font-family:  'Outfit', sans-serif;
+            color: rgb(68, 67, 67);
+            font-size: 16px;
+        }
+        #logo > img{
+            width: 50px;
+            height: 50px;     
+        }
+        #studio > sup{
+            color: rgb(238, 42, 75);
+            font-size: 10px;
+        }
+        #search > input{
+            width: 400px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgb(226, 223, 223);          
+        }
+        #right{
+            width: 12%;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 700;
+            color: rgb(37, 37, 37);
+        }
+    #womenspage {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    #womenspage > div{
+        width: 210px;
+        height: 350;
+        text-align:left;
+        margin-top: 10px;
+        margin-left: 10px;
+        line-height: 0.0cm;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #womenspage > div > div{
+        display: flex;   
+    }
+    #womenspage > div > button{
+        width: 210px;
+        height: 30px;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="left">
+        <div id="logo">
+            <img src="https://gumlet.assettype.com/afaqs%2F2021-01%2F15f5f827-8e29-4520-af8d-a0f353b8da17%2Fimages.png?auto=format&q=35&w=1200" alt="Logo"
+            >
+        </div>
+        <div id="men">MEN</div>
+        <div id="women">WOMEN</div>
+        <div id="kids">KIDS</div>
+        <div id="home">HOME & LIVING</div>
+        <div id="beauty">BEAUTY</div>
+        <div id="studio" >STUDIO<sup>NEW</sup></div>
+    </div>
+        <div id="search">
+            
+            <input type="text" placeholder="search for products,brands and more..">
+        </div>
+        <div id="right">
+        <div>Profile</div>
+        <div>Wishlist</div>
+        <div>Bag</div>
+    </div>
+    </div>
+    <div id="womenspage">
+
+    </div>
+</body>
+</html>
+<script>
+womensData= [
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14046594/2021/7/9/ef6e0707-8356-4935-9738-2b10d15f53661625806322413-Libas-Women-Navy-Blue--Yellow-Floral-Printed-Pure-Cotton-Kur-5.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12541372/2020/11/6/da18ab22-79a1-46f0-a0cf-58c313fe98881604665115144VarangaWomenMauveZariYokeDesignChanderiSilkKurtawithTrousers1.jpg",
+brand_name: "Moda Rapido",
+price: "Rs. 314",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13515828/2021/3/9/3c9ae2a6-d702-460e-8112-fe9327794a891615295030445IndoEraNavyBlueSolidStraightKurtaTrouserWithDupattaSets1.jpg",
+brand_name: "Roadster",
+price: "Rs. 224",
+striked_off_price: "Rs. 499",
+},
+{
+image_url: " https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13769548/2021/3/24/99554cf4-00eb-4e80-a5c1-3c246c4222361616581464365-Indo-Era-Navy-Blue-Printed-A-line-Kurta-Trouser-With-Dupatta-1.jpg",
+brand_name: "DILLINGER",
+price: "Rs. 491",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13791608/2021/3/26/c5c0816a-e198-4898-a5ed-0fce77cf6a8c1616739117521-Anouk-Women-Peach-Coloured-Embroidered-Kurta-with-Palazzos-8-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11056154/2019/12/5/30b0017d-7e72-4d40-9633-ef78d01719741575541717470-AHIKA-Women-Black--Green-Printed-Straight-Kurta-990157554171-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 1429",
+striked_off_price: "Rs. 2699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15055288/2021/8/25/c98faf84-ee82-475e-ae92-9d30cfff45c11629884548093-Libas-Women-Kurta-Sets-7601629884547432-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13902678/2021/4/6/a5dfcb9a-af2a-4ed8-98bf-e10a8b3b5a891617704827106-Anouk-Women-Kurta-Sets-911617704825967-1.jpg",
+brand_name: "Levis",
+price: "Rs. 899",
+striked_off_price: "Rs. 1799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13962282/2021/7/5/26f8c8a9-e900-4510-9fb0-ac42f029442c1625483017312-Indo-Era-Beigh-Embroidered-Straight-Kurta-Palazzo-With-Dupat-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11056866/2019/12/9/67a0d919-cbca-4d89-a8f1-6a25c9e9305c1575891613300-Round-NeckWith--34th-Sleeve-Straight-Floral-print-Crepe-Kurt-1.jpg",
+brand_name: "Campus Sutra",
+price: "Rs. 474",
+striked_off_price: "Rs. 979",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15055286/2021/8/23/437f2208-de06-4ca9-91af-e73332d3e7261629717228200-Libas-Women-Kurta-Sets-8831629717227163-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 1299",
+striked_off_price: "Rs. 2599",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16179648/2021/12/7/f891d56c-e455-4723-a4ae-58b2783734221638889253382-Seerat-Women-Mustard-Yellow-Ethnic-Motifs-Regular-Pure-Silk--1.jpg",
+brand_name: "Moda Rapido",
+price: "Rs. 269",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15055282/2021/8/23/e41f95d9-5c66-4d00-b0e8-78074ae263c11629716851665-Libas-Women-Kurta-Sets-3101629716851087-7.jpg",
+brand_name: "Urbano Fashion",
+price: "Rs. 494",
+striked_off_price: "Rs. 1099",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16505426/2021/12/13/811d69bb-f797-4b1e-926e-90777ba03b8e1639401131242KALINIWomenGreenStripedFlaredSleevesFloralAnarkaliKurta1.jpg",
+brand_name: "Mast & Harbour",
+price: "Rs. 454",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12222036/2020/10/6/d7ae3065-98d4-42d0-b244-d2b18802ff101601959656577-SASSAFRAS-Women-Black-Solid-High-Neck-Cropped-Top-4441601959-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13842966/2021/4/3/3d20dde9-8c47-48f2-a079-8cdacd9c78b11617444711671-Sassafras-Brown--Red-Geometric-Printed-Georgette-Wrap-Crop-T-1.jpg",
+brand_name: "Here & Now",
+price: "Rs. 209",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13719118/2021/3/3/d7568371-96e2-4588-b0b2-fa7f3a2d6edb1614752823080-Athena-Turquoise-Blue-top-with-power-shoulder-sleeve-detail--1.jpg",
+brand_name: "SPYKAR",
+price: "Rs. 1019",
+striked_off_price: "Rs. 1999",
+},
+
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/5965271/2018/5/16/163f23bf-fdd2-4965-a8e0-b1afe572fbba1526460475925-nA-3871526460475766-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 934",
+striked_off_price: "Rs. 1699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/2/5/ef1a8ba7-1794-4495-a406-c5f53d09df7b1549358412858-1.jpg",
+brand_name: "Levis",
+price: "Rs. 699",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14869306/2021/10/18/9bb7a675-8eb9-4278-b804-40fc7bc8b1641634557865427DEASWomenPinkMuleswithLaserCutsFlats1.jpg",
+brand_name: "WROGN",
+price: "Rs. 699",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11365474/2020/2/11/79b4d4bb-67ca-40fb-a7a6-cfbdf6d7c7321581423071776-Marc-Loire-Women-Grey--Pink-Woven-Design-Ballerinas-59915814-1.jpg",
+brand_name: "Roadster",
+price: "Rs. 349",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13981716/2021/10/20/2109e3ef-4b66-458a-bf96-6f469ffc2dfe1634713369276-DressBerry-Women-Flats-961634713368776-1.jpg",
+brand_name: "Highlander",
+price: "Rs. 599",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1773090/2017/3/27/11490598516154-Mast--Harbour-Women-Flats-911490598516019-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 449",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12721068/2021/2/17/15ae8152-bbbe-4b2d-ad6d-e746c424df2d1613544261871-Shezone-Women-Beige-Solid-Ballerinas-241613544259949-1.jpg",
+brand_name: "Difference of Opinion",
+price: "Rs. 499",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8119785/2019/5/24/0a506159-2108-44ee-b122-6b9b0b53112f1558674160552-Maybelline-New-York-Fit-Me-MattePoreless-Liquid-Foundation-T-1.jpg",
+brand_name: "HERE & NOW",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11632898/2021/8/3/88ba89e5-cfd2-4f04-9cb6-0f5c970b9fd91627983100472SUGARSetof4SmudgeMeNotLiquidMiniBoldLipstick1.jpg",
+brand_name: "DILLINGER",
+price: "Rs. 414",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13203912/2021/3/24/0f5fe5cb-696c-4cd5-a911-f1cec296f5e51616572811065-Lakme-Women-Foundation-and-Primer-4691616572807941-1.jpg",
+brand_name: "Roadster",
+price: "Rs. 449",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1967182/2018/7/31/f8e75fd5-47f4-4cc6-946d-cc069773cffb1533030162531-Maybelline-Black-Hyper-Curl-Mascara-Waterproof-Mascara-4211533030162488-1.jpg",
+brand_name: "Huetrap",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2421530/2021/12/16/47817746-3330-4309-abde-0cce79cd0fe21639677243676FACESCANADAUltimeProMakeupFixer4.jpg",
+brand_name: "Nautica",
+price: "Rs. 454",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9352381/2020/7/22/a729594c-e0fc-4401-8290-94951014dd651595417285767PRADAAmberPourHommeEauDeToilette100mlBodyLotionNiveaWomenLip1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 599",
+striked_off_price: "Rs. 1099",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10251869/2020/10/19/f1c8bd65-8c02-452c-8a73-0e17e73ae0721603103329150-Maybelline-New-York-Fit-Me-Matte--Poreless-Liquid-Foundation-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 699",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8886439/2020/12/4/4e5b49dd-149d-4114-bc9b-c77982b015741607096309765-FACES-CANADA-Black-Magneteyes-Dramatic-Volumizing-Mascara-95-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16570346/2021/12/21/b3ec4099-d740-45ee-808c-f1d60288d40f1640076207459KajalandEyeliner1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 399",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10769098/2019/10/17/e4bb7db8-e8d7-4169-ac67-55ba2d164d9a1571294516003-NOISE-Black-ColorFit-Pro-2-Active-Smartwatch-324157129451526-4.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16377430/2022/1/12/61131296-533b-4206-abd8-b99e37eb29901641968439090-Fire-Boltt-CALL-Unisex-17-Bluetooth-Calling-Smartwatch---Bla-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 499",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13554306/2021/2/9/50949a48-74ac-4ad4-9e8b-2113dc41dc611612846806711-Realme-Unisex-Black-Smart-Watch-3291612846805955-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10769100/2019/10/17/5c741d75-f365-4d92-9ad7-88a9a8473cc41571294527910-Noise--Teal-Green-ColorFit-Pro-2-Active-Smartwatch-395157129-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 514",
+striked_off_price: "Rs. 799",
+},
+]
+
+    womensData.map(function(data){
+        var div1 = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src",data.image_url);
+        var btn= document.createElement("button");
+        btn.textContent="WISHLIST";
+        var h3 = document.createElement("h3");
+        h3.textContent = data.brand_name;
+        var div2 = document.createElement("div");
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+        var p2 =document.createElement("p");
+        p2.textContent = data.striked_off_price;
+        div2.append(p1,p2);
+        div1.append(image,btn,h3,div2);
+        document.querySelector("#womenspage").append(div1);
+    });
+    document.querySelector("#men",addEventListener("click",pageRedirect1));
+document.querySelector("#women",addEventListener("click",pageRedirect2));
+document.querySelector("#kids",addEventListener("click",pageRedirect3));
+function pageRedirect1(){
+    window.location.href= "mens.html";
+}
+function pageRedirect2(){
+    window.location.href= "womens.html";
+}
+function pageRedirect3(){
+    window.location.href= "kids.html";
+}
+
+</script>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #nav{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #left{
+            width: 55%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 700;
+            font-family:  'Outfit', sans-serif;
+            color: rgb(68, 67, 67);
+            font-size: 16px;
+        }
+        #logo > img{
+            width: 50px;
+            height: 50px;     
+        }
+        #studio > sup{
+            color: rgb(238, 42, 75);
+            font-size: 10px;
+        }
+        #search > input{
+            width: 400px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgb(226, 223, 223);          
+        }
+        #right{
+            width: 12%;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 700;
+            color: rgb(37, 37, 37);
+        }
+    #menspage {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    #menspage > div{
+        width: 210px;
+        height: 350;
+        text-align:left;
+        margin-top: 10px;
+        margin-left: 10px;
+        line-height: 0.0cm;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #menspage > div > div{
+        display: flex;   
+    }
+    #menspage > div > button{
+        width: 210px;
+        height: 30px;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="left">
+        <div id="logo">
+            <img src="https://gumlet.assettype.com/afaqs%2F2021-01%2F15f5f827-8e29-4520-af8d-a0f353b8da17%2Fimages.png?auto=format&q=35&w=1200" alt="Logo"
+            >
+        </div>
+        <div id="men">MEN</div>
+        <div id="women">WOMEN</div>
+        <div id="kids">KIDS</div>
+        <div id="home">HOME & LIVING</div>
+        <div id="beauty">BEAUTY</div>
+        <div id="studio" >STUDIO<sup>NEW</sup></div>
+    </div>
+        <div id="search">
+            
+            <input type="text" placeholder="search for products,brands and more..">
+        </div>
+        <div id="right">
+        <div>Profile</div>
+        <div>Wishlist</div>
+        <div>Bag</div>
+    </div>
+    </div>
+    <div id="menspage">
+
+    </div>
+</body>
+</html>
+<script>
+    mensData= [
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700871/2020/1/22/f932ae44-0fb8-4b92-b7bc-f1756253294b1579692118186-HRX-by-Hrithik-Roshan-Men-Teal-Blue-Printed-T-shirt-90515796-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2378362/2018/6/9/270e0a7e-365b-4640-9433-b269c60bf3061528527188563-Moda-Rapido-Men-Maroon-Printed-Round-Neck-T-shirt-3811528527-1.jpg",
+brand_name: "Moda Rapido",
+price: "Rs. 314",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1072681/2020/1/20/9de2d7dc-e239-4327-b7d0-096c80ac3a121579503443912-Roadster-Men-Charcoal-Melange-Printed-Round-Neck-T-shirt-364-1.jpg",
+brand_name: "Roadster",
+price: "Rs. 224",
+striked_off_price: "Rs. 499",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11067734/2019/12/10/34b589c2-80b9-4ad9-81ea-84333fbc46761575972548055-DILLINGER-Men-Tshirts-4071575972546110-1.jpg",
+brand_name: "DILLINGER",
+price: "Rs. 491",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1700944/2019/6/8/972c9498-3a37-4d5d-976c-4493b4d5c0021559989322793-HRX-by-Hrithik-Roshan-Men-Yellow-Printed-Round-Neck-T-Shirt--1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11487350/2020/6/17/e4f271bd-4776-45a4-82e9-3b4feda4f56c1592396681034-Nautica-Men-Tshirts-6561592396679583-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 1429",
+striked_off_price: "Rs. 2699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10106341/2020/12/4/ebd42abb-c45f-4290-b8e7-073f18f3b8541607088518050-HRX-by-Hrithik-Roshan-Ultralyte-Men-Black-Solid-Running-T-sh-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15813904/2021/11/16/cd84a825-e60e-4ad4-b891-2edaeb59f78d1637050200768TshirtsLevisMenJeansLevisMenJeansLevisMenShirtsArrowSportMen1.jpg",
+brand_name: "Levis",
+price: "Rs. 899",
+striked_off_price: "Rs. 1799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2314372/2018/6/19/29e8ddfd-6f5f-43fd-8b71-dfa8ac6cef681529385860869-HRX-by-Hrithik-Roshan-Men-Charcoal-Grey-Slim-Advanced-Rapid--1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10016983/2019/6/20/b5caaca7-b5e8-4134-9283-65473a2388031561026348090-Campus-Sutra-Men-Blue-Colourblocked-Round-Neck-T-shirt-99915-1.jpg",
+brand_name: "Campus Sutra",
+price: "Rs. 474",
+striked_off_price: "Rs. 979",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15339972/2021/9/26/61e40140-e0bb-4e51-8efc-c512e97ba4041632645469927-Nautica-Men-Tshirts-7831632645469409-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 1299",
+striked_off_price: "Rs. 2599",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2221318/2017/12/6/11512544982740-Moda-Rapido-Men-Maroon-Colourblocked-Round-Neck-T-shirt-4391512544982619-1.jpg",
+brand_name: "Moda Rapido",
+price: "Rs. 269",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12377258/2020/9/11/ce1b7bcb-a65a-4eb0-a317-42ac02718f1e1599798741705UrbanoFashionPrintedMenRoundNeckDarkGreenT-Shirt1.jpg",
+brand_name: "Urbano Fashion",
+price: "Rs. 494",
+striked_off_price: "Rs. 1099",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/4149427/2019/1/23/71835815-7adf-4adc-be83-4d88addf33771548237070307-Mast--Harbour-Men-Off-White-Striped-Polo-Collar-T-shirt-3051-1.jpg",
+brand_name: "Mast & Harbour",
+price: "Rs. 454",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10565566/2020/2/4/98edd42d-583b-44ff-9d90-4e67e5a3522f1580809674758-HRX-by-Hrithik-Roshan-Men-Black-Solid-Running-T-shirt-163158-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12816878/2020/12/8/992feaf9-6ccf-4880-8076-100237f3c1c91607426778122-HERENOW-Men-Tshirts-2751607426776423-1.jpg",
+brand_name: "Here & Now",
+price: "Rs. 209",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16212374/2021/12/15/eadbc623-fe2d-41c2-84f8-4541bc318fc81639555724101-SPYKAR-Men-Coral-Solid-V-Neck-Pure-Cotton-Slim-Fit-T-shirt-w-1.jpg",
+brand_name: "SPYKAR",
+price: "Rs. 1019",
+striked_off_price: "Rs. 1999",
+},
+
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15738570/2021/11/12/8de14db8-4feb-4e66-9dd8-c34fc405edda1636699581425RoadsterWomenBlackSolidBikerJacketShirtsTommyHilfigerMenJack1.jpg",
+brand_name: "Nautica",
+price: "Rs. 934",
+striked_off_price: "Rs. 1699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14851086/2021/12/24/c908e824-ee06-4f18-9256-48551060a2851640339955285-Levis-Men-Olive-Green-Typography-Printed-Round-Neck-Pure-Cot-1.jpg",
+brand_name: "Levis",
+price: "Rs. 699",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11363700/2020/3/2/ec73c88e-e651-4983-aaf1-1f21f7d877551583149435427-WROGN-Men-Tshirts-1401583149433605-1.jpg",
+brand_name: "WROGN",
+price: "Rs. 699",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10938426/2020/3/3/e74099d5-1711-4141-8f5b-74d650e3146c1583220839421-Roadster-Men-Tshirts-8151583220838394-1.jpg",
+brand_name: "Roadster",
+price: "Rs. 349",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1703238/2018/3/30/11522394076063-HIGHLANDER-Men-Black-Solid-Round-Neck-T-shirt-4731522394075913-1.jpg",
+brand_name: "Highlander",
+price: "Rs. 599",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11487320/2020/7/14/fa0698ec-d970-473e-81d1-0af8072a6c2a1594704399900-Nautica-Men-Tshirts-8341594704398097-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 449",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11077774/2019/12/24/29bdd2c8-3e2f-43aa-8ce5-55f3a501a4fa1577166621272-Difference-of-Opinion-Men-Sea-Green-Solid-Round-Neck-T-shirt-1.jpg",
+brand_name: "Difference of Opinion",
+price: "Rs. 499",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2383699/2018/2/10/11518245053359-HERENOW-Men-Grey-Solid-V-Neck-T-shirt-9591518245053163-1.jpg",
+brand_name: "HERE & NOW",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11067722/2019/12/10/1290831c-0862-4b6a-8eee-41a6cad1b1e01575972511857-DILLINGER-Men-Tshirts-3141575972509288-1.jpg",
+brand_name: "DILLINGER",
+price: "Rs. 414",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1295511/2018/5/2/11525248119235-Roadster-Men-Navy--Blue-Melange-Colour-Blocked-T-Shirt-751525248119047-1.jpg",
+brand_name: "Roadster",
+price: "Rs. 449",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/12/1aab2a18-6774-4f83-b292-fe301755a3351576102551329-1.jpg",
+brand_name: "Huetrap",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15297188/2021/9/27/3a68eb8b-3e76-4cef-95e4-0a10b3bf75741632736312703-Nautica-Men-Tshirts-6861632736312005-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 454",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2314424/2018/5/24/16fad75c-35ed-4780-8625-193cc8dae4fc1527173672482-HRX-by-Hrithik-Roshan-Men-Black-Slim-Advanced-Rapid-Dry-Raglan-T-shirt-3541527173669891-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 599",
+striked_off_price: "Rs. 1099",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16590968/2021/12/23/ef2521a7-c238-4cda-9d34-6ca7936aeac11640243292593RegularFitRound-neckT-shirt1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 699",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15551432/2021/10/22/ccfd2406-2b94-4a61-a81a-fed172b73b451634902679820-US-Polo-Assn-Men-Tshirts-7001634902679230-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12551910/2021/1/13/e9bbba61-1fc3-46c1-a4b8-71974419077b1610534017270-Mast--Harbour-Men-White--Red-Striped-Polo-Collar-T-shirt-918-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 399",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13819100/2021/4/7/74b77cbe-b7ee-4c7c-977a-5b8ff51379131617788592510-Bewakoof-Men-Tshirts-611617788591720-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11363908/2020/3/2/3047363c-f29a-416e-8f8b-f070c08cf39f1583149447602-WROGN-Men-Tshirts-271583149446309-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 499",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10017085/2019/6/20/2be736d5-66cb-43a2-8208-5cea2ee1e0711561027340024-Campus-Sutra-Graphic-Print-Men-Round-Neck-Grey-T-Shirt-43715-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6825469/2018/10/17/6a11fe3f-73b0-43ee-8d48-8de1cb502a411539758421051-HRX-by-Hrithik-Roshan-Men-White-Printed-Round-Neck-T-shirt-9-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 514",
+striked_off_price: "Rs. 799",
+},
+]
+
+    mensData.map(function(data){
+        var div1 = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src",data.image_url);
+        var btn= document.createElement("button");
+        btn.textContent="WISHLIST";
+        var h3 = document.createElement("h3");
+        h3.textContent = data.brand_name;
+        var div2 = document.createElement("div");
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+        var p2 =document.createElement("p");
+        p2.textContent = data.striked_off_price;
+        div2.append(p1,p2);
+        div1.append(image,btn,h3,div2);
+        document.querySelector("#menspage").append(div1);
+    });
+    document.querySelector("#men",addEventListener("click",pageRedirect1));
+document.querySelector("#women",addEventListener("click",pageRedirect2));
+document.querySelector("#kids",addEventListener("click",pageRedirect3));
+function pageRedirect1(){
+    window.location.href= "mens.html";
+}
+function pageRedirect2(){
+    window.location.href= "womens.html";
+}
+function pageRedirect3(){
+    window.location.href= "kids.html";
+}
+
+</script>
