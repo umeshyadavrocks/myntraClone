@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+        body{
+            background-color: rgb(253,238,239);
+        }
+        #container{
+            height: 500px;
+            width: 30%;
+            margin:auto;
+            
+        }
+        #offer > img{
+            width: 100%;
+            height: 200px;
+        }
+        #mobile,#pass{
+            width: 80%;
+            padding: 12px;
+            border: 1px solid rgb(212, 212, 212);
+        }
+        #submit{
+            width: 87%;
+            padding: 12px;
+            background-color: rgb(199, 79, 109);
+            color: white;
+            font-weight: 700;
+            border: none;
+            margin-top: 30px;
+        }
+        #pink{
+            color: rgb(206, 56, 81);
+            font-weight: 800;
+        }
+        .terms{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:inherit;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="offer">
+            <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2022/1/14/d63fc446-4087-4e07-b2dd-1d060368d2661642184399341-Banner_Login-page-400.png"
+             alt="">
+        </div>
+        <div id="content">
+            <h2>Login or Signup</h2>
+            <form action="">
+            <input id="mobile" type="number" placeholder="Mobile Number">
+            <div class="terms">
+            <p>By continuing, I agree to the, </p>
+            <p id="pink">&nbsp Term of Use &nbsp</p>
+            <p>&</p>
+            <p id="pink">&nbsp Privacy Policy</p>
+            </div>
+            <input id="pass" type="text" placeholder="Enter Password">
+            
+            <input id="submit" type="submit" value="CONTINUE">
+            <div class="terms"></div>
+            <p>Have trouble Logging In? </p>
+            <p id="pink">Get Help</p>
+        </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    
+    document.querySelector("form").addEventListener("submit",logIn);
+    var regdUsers = JSON.parse(localStorage.getItem("userData"));
+    console.log(regdUsers);
+    function logIn(event){
+        event.preventDefault();
+        var mobilelog = document.querySelector("#mobile").value;
+        var passlog = document.querySelector("#pass").value;
+        for(var i = 0; i < regdUsers.length; i++)
+    {
+        if(regdUsers[i].password ==passlog && regdUsers[i].mobileNum ==mobilelog)
+        {
+            window.location.href="home.html";
+        }
+        else{
+            alert("Please Signup");
+            window.location.href="signup.html";
+        }
+    }
+    }
+
+    
+</script>

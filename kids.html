@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #nav{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #left{
+            width: 55%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 700;
+            font-family:  'Outfit', sans-serif;
+            color: rgb(68, 67, 67);
+            font-size: 16px;
+        }
+        #logo > img{
+            width: 50px;
+            height: 50px;     
+        }
+        #studio > sup{
+            color: rgb(238, 42, 75);
+            font-size: 10px;
+        }
+        #search > input{
+            width: 400px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgb(226, 223, 223);          
+        }
+        #right{
+            width: 12%;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 700;
+            color: rgb(37, 37, 37);
+        }
+    #kidspage {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    #kidspage > div{
+        width: 210px;
+        height: 350;
+        text-align:left;
+        margin-top: 10px;
+        margin-left: 10px;
+        line-height: 0.0cm;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+    }
+    #kidspage > div > div{
+        display: flex;   
+    }
+    #kidspage > div > button{
+        width: 210px;
+        height: 30px;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="left">
+        <div id="logo" onclick="window.location.href='home.html'">
+            <img src="https://gumlet.assettype.com/afaqs%2F2021-01%2F15f5f827-8e29-4520-af8d-a0f353b8da17%2Fimages.png?auto=format&q=35&w=1200" alt="Logo"
+            >
+        </div>
+        <div id="men" onclick="window.location.href='mens.html'">MEN</div>
+        <div id="women" onclick="window.location.href='womens.html'">WOMEN</div>
+        <div id="kids" onclick="window.location.href='kids.html'">KIDS</div>
+        <div id="home" onclick="window.location.href='home.html'">HOME & LIVING</div>
+        <div id="beauty" onclick="window.location.href='home.html'">BEAUTY</div>
+        <div id="studio" onclick="window.location.href='home.html'">STUDIO<sup>NEW</sup></div>
+    </div>
+        <div id="search">
+            
+            <input type="text" placeholder="search for products,brands and more..">
+        </div>
+        <div id="right">
+        <div id="profile" onclick="window.location.href='login.html'">Profile</div>
+        <div onclick="window.location.href='wishlist.html'">Wishlist</div>
+        <div>Bag</div>
+    </div>
+    </div>
+    <div id="kidspage">
+
+    </div>
+</body>
+</html>
+<script>
+kidsData= [
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6676849/2021/12/16/a7082a4a-7d63-4af8-9c03-589f92e38b1f1639636204088-Nike-Boys-Black-Revolution-4-Running-Shoes-6401639636203850-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15928982/2021/11/3/925017d3-3d30-45f5-8885-f5b616c79c4a1635936877532RedTapeUnisexKidsGreenWhiteMeshWalkingNon-MarkingShoes1.jpg",
+brand_name: "Moda Rapido",
+price: "Rs. 314",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/6/30/6748c66f-067f-453c-a622-2074ffb9a7181625062058138-1.jpg",
+brand_name: "Roadster",
+price: "Rs. 224",
+striked_off_price: "Rs. 499",
+},
+{
+image_url: " https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15238122/2021/8/24/d60e1f33-1e40-4df1-8378-1837c0e1082a1629785346782BONKIDSBoysMustardYellowPrintedPocketsSlimFitT-shirt1.jpg",
+brand_name: "DILLINGER",
+price: "Rs. 491",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16334330/2021/12/2/5eb31306-337b-4db9-9089-ef45e0ed1f751638417222084ClothingSet1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/8/14/6d5a7a0d-8440-444e-a2cd-2837704077be1565767690458-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 1429",
+striked_off_price: "Rs. 2699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16265230/2021/11/27/446cb0d6-e1aa-45b0-acb7-cdaa31cc3c5e1637992151710TiberTaberBoysYellowPrintedRegularPureCottonKurtawithDhotiPa1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14945740/2021/7/27/3db0248d-4733-471c-b340-8e4d899157821627364322229VASTRAMAYBoysYellowFloralPrintedAngrakhaKurtiwithDhotiPants1.jpg",
+brand_name: "Levis",
+price: "Rs. 899",
+striked_off_price: "Rs. 1799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16570588/2021/12/21/383e709e-8abd-439b-8f79-2f329a8347b01640081860620PrintedT-shirt1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16276104/2021/11/27/2b5a1de6-e6c7-4709-8a21-31b2c0a91bd91638009421277BONKIDSBoysRedPrintedHoodedSweatshirt1.jpg",
+brand_name: "Campus Sutra",
+price: "Rs. 474",
+striked_off_price: "Rs. 979",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16027718/2021/11/8/c5fe0911-ce90-4c3b-bd0b-bee1d3bfb5aa1636359475288PantaloonsJunior1.jpg",
+brand_name: "Nautica",
+price: "Rs. 1299",
+striked_off_price: "Rs. 2599",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12077174/2020/7/14/c70665da-c9ae-4cca-b375-e96201d33ef71594712533170JBNCreationblue1.jpg",
+brand_name: "Moda Rapido",
+price: "Rs. 269",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16358270/2021/12/3/86ba912e-c63b-4a85-91ad-07b0c4fa3fd81638537836927SoftToysandDolls1.jpg",
+brand_name: "Urbano Fashion",
+price: "Rs. 494",
+striked_off_price: "Rs. 1099",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16498688/2021/12/13/69045731-6877-41bd-adbd-51e732f25f641639388919055SoftToysandDolls1.jpg",
+brand_name: "Mast & Harbour",
+price: "Rs. 454",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15336886/2021/9/2/efd966fe-81fb-4dd2-8845-728e0d3f51891630558257988DukieKooky1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 404",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12232328/2021/12/2/e8c03436-c98c-41d2-9629-d390a446e7151638468190729UltraUnisexKidsWhiteRedHappyBirthdayTeddySoftToy1.jpg",
+brand_name: "Here & Now",
+price: "Rs. 209",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/9/9/af24c22c-6fc3-4d59-8798-fe6b6fe101881599604576837-1.jpg",
+brand_name: "SPYKAR",
+price: "Rs. 1019",
+striked_off_price: "Rs. 1999",
+},
+
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10722050/2021/10/27/b7650f16-0e8d-4672-9145-4f6d025593e61635316602843KazarMaxKidsFluorescentGreenBlueOmbreEffectClogs1.jpg",
+brand_name: "Nautica",
+price: "Rs. 934",
+striked_off_price: "Rs. 1699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15686776/2021/9/29/ca37ff3f-3341-48c9-ad6b-39439c9226361632922697120max1.jpg",
+brand_name: "Levis",
+price: "Rs. 699",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16183844/2021/11/20/231b69fe-519f-4df5-ad30-8ee28733f2111637406746226YellowBeeGirlsPink1.jpg",
+brand_name: "WROGN",
+price: "Rs. 699",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16228934/2021/11/24/1170d9b2-bbb7-41b0-8217-cf272a87a5841637763742205FameForeverbyLifestyleBoysNavyBlue1.jpg",
+brand_name: "Roadster",
+price: "Rs. 349",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/11/63c638c5-c1d7-4d1f-875a-d9e3f12ad3991602366179704-1.jpg",
+brand_name: "Highlander",
+price: "Rs. 599",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/10/05c80e86-e433-4a1d-9dbf-f8f4ecafd4951602288203347-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 449",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16346926/2021/12/2/c2bed830-fbce-4001-83b6-3eb4ebaa42ca1638451779632LearningandDevelopmentToys1.jpg",
+brand_name: "Difference of Opinion",
+price: "Rs. 499",
+striked_off_price: "Rs. 1299",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16346884/2021/12/2/a5034036-3617-4151-9c69-7334ad65e46d1638448550835LearningandDevelopmentToys1.jpg",
+brand_name: "HERE & NOW",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/16191538/2021/12/18/a0db71f5-030b-4697-b211-576e30a1be5a1639771419881BrainsmithKidsMammalsQuantumCards1.jpg",
+brand_name: "DILLINGER",
+price: "Rs. 414",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15305110/2021/8/30/fbaf9160-cb3b-42b9-bcf6-9e1e6da1a0351630315435611Slate1.jpg",
+brand_name: "Roadster",
+price: "Rs. 449",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2021/7/7/8278db09-bb39-47a1-b685-62e6f8c41e5d1625658247502-1.jpg",
+brand_name: "Huetrap",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1453404/2016/8/19/11471598466542-Zoop-Girls-Mustard-Yellow-Printed-Dial-Watch-NEC4032PP01CJ-8561471598466362-1.jpg",
+brand_name: "Nautica",
+price: "Rs. 454",
+striked_off_price: "Rs. 899",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14972534/2021/8/30/46ce595a-d0f0-4fbc-b6b9-c8c3e149aecd1630313404089-Rizzly-Girls-Pink-Brass-Printed-Dial--Leather-Straps-Analogu-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 599",
+striked_off_price: "Rs. 1099",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15967040/2021/10/30/439e56d2-aa3b-4374-906f-0d4ac6f457f61635554422832SpikyUnisexKidsGreenPrintedDialGreenWrapAroundStrapsDigitalM1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 699",
+striked_off_price: "Rs. 1199",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/v1/images/style/properties/Zoop-Kids-Yellow-Dial-Watch_ac4d0d452199fc19eed309385da41034_images.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/4449847/2018/4/4/11522833667419-na-4641522833667323-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 399",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15141618/2021/8/13/2dfe7164-80f4-4a95-842d-b24f9701a8a91628860634241Sunglasses1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15150226/2021/8/23/92df92d6-996e-4ae9-9262-123b774751fc1629708509794-Carlton-London-Girls-Sunglasses-7901629708509584-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 499",
+striked_off_price: "Rs. 799",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/11/14/1f832303-690f-41e7-9509-520ee389ece41605316976207-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 314",
+striked_off_price: "Rs. 699",
+},
+{
+image_url: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15150272/2021/8/23/968171bb-9af0-4601-8c8d-5b91e129b4c01629717838226-Carlton-London-Boys-Sunglasses-9271629717838012-1.jpg",
+brand_name: "HRX by Hritik Roshan",
+price: "Rs. 514",
+striked_off_price: "Rs. 799",
+},
+]
+
+    kidsData.map(function(data){
+        var div1 = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src",data.image_url);
+        var btn= document.createElement("button");
+        btn.textContent="WISHLIST";
+        var h3 = document.createElement("h3");
+        h3.textContent = data.brand_name;
+        var div2 = document.createElement("div");
+        var p1 = document.createElement("p");
+        p1.textContent = data.price;
+        var p2 =document.createElement("p");
+        p2.textContent = data.striked_off_price;
+        div2.append(p1,p2);
+        div1.append(image,btn,h3,div2);
+        document.querySelector("#kidspage").append(div1);
+    });
+
+</script>
